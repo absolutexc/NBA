@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+
+/* main часть */
+body {
+    margin: 0;
+}
+
+main{
+    min-height: 100vh;
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.teams{
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* header часть */
+
+header{
+    height: 10vh;
+    background-color: #DBEAFE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo{
+    padding: 3% 110px 0 0;
+    height: 79px;
+    width: 160px;
+}
+
+button{
+    text-decoration: none;
+    color: #2a2a2a;
+    margin-left: 2%;
+}
+
+.login{
+    text-decoration: none;
+    color: #2a2a2a;
+    font-size: 15px;
+}
+
+/* main часть */
+
+.Mheader{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 6vh;
+    margin-left:18%;
+    text-align: center;
+    font-size: 45px;
+}
+
+.zagolovok{
+    margin-top: 0;
+    border-radius: 20px;
+}
+
+.nba{
+    width: 200px;
+    height: 400px;
+}
+
+/* бургер-меню */
+
+.burger-menu__button{
+    position: fixed;
+    top: 8px;
+    right: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius:50%;
+    background-color: #818181;
+    z-index: 30;
+    transition: 0.4s;
+}
+
+.burger-menu__button:hover .burger-menu__lines{
+    opacity: 0.7;
+}
+
+.burger-menu__lines,
+.burger-menu__lines::after,
+.burger-menu__lines::before {
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background-color: #fff;
+}
+
+.burger-menu__lines{
+    top:50%;
+    right:0%;
+    transform: translate(-50%, -50%);
+}
+
+.burger-menu__lines::before{
+    content: '';
+    top: -14px;
+}
+
+.burger-menu__lines::after{
+    content: '';
+    top: 14px;
+}
+
+.burger-menu_active .burger-menu__button,
+.burger-menu_active .burger-menu__lines{
+    background-color: transparent;
+}
+
+.burger-menu_active .burger-menu__lines::before{
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.burger-menu_active .burger-menu__lines::after{
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.burger-menu__nav{
+    top: 0;
+    padding-top: 80px;
+    position: fixed;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #2a2a2a;
+    overflow-y:auto;
+    right: -100%;
+    transition: 0.5s;
+    opacity: 0.95;
+}
+
+.burger-menu_active .burger-menu__nav {
+    right: 0;
+}
+
+.burger-menu__link{
+    padding: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 600;
+    color:#fff;
+}
+
+.burger-menu__link:hover{
+    opacity: 0.7;
+}
+
+.burger-menu__overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+.burger-menu_active .burger-menu__overlay{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.icon{
+    width:30px;
+}
+
+/* подвал */
+
+footer{
+    background-color: #424446;
+    padding: 0.7vh;
+    color:rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerTxt{
+    padding-left: 2%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.discord{
+    height: 45px;
+    width: 45px;
+}
+
+.tg{
+    height: 45px;
+    width: 45px;
+}
+
+.vk{
+    height: 43px;
+    width: 43px;
+}
+/* адаптивность */
+
+/* телефон (вертикально) */
+
+@media (max-width: 480px) and (orientation: portrait){
+    .logo{
+        width: 100px;
+        height: 55px;
+    }
+    .teams{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Mheader{
+        margin-left:5%;
+        padding-top: 6vh;
+        font-size: 17px;
+        text-align: left;
+    }
+    .login{
+        text-decoration: none;
+        color: #2a2a2a;
+        font-size: 12px;
+    }
+    .nba{
+        width: 100px;
+        height: 150px;
+    }
+    .burger-menu__button{
+        width: 50px;
+        height: 50px;
+    }
+    .burger-menu__lines,
+    .burger-menu__lines::after,
+    .burger-menu__lines::before {
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+    }
+    .burger-menu__lines::before{
+        content: '';
+        top: -10px;
+    }
+    
+    .burger-menu__lines::after{
+        content: '';
+        top: 10px;
+    }
+}
+
+/* телефон (горизонтально) */
+
+@media (max-width: 768px) and (orientation: landscape){
+    body{
+        width: 100vw;
+    }
+    header{
+        width: 100vw;
+    }
+}

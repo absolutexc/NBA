@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+}
+
+form{
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+a{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+input{
+    margin: 1.5em;
+    padding: 1em;
+    width: 180px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    margin: 1.5em;
+    padding: 1em;
+    width: 210px;
+    height: 20px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(89, 121, 209, 0.829);
+}
+
+.parol{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
